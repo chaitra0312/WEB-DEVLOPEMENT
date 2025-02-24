@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal and External JavaScript Example</title>
+    <!-- Link to External JavaScript -->
+    <script src="6a.js"></script>
+    <style>
+        /* General Page Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        
+        h1 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        /* Paragraph Styling */
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #555;
+            margin-bottom: 20px;
+            text-align: center;
+            width: 80%;
+            max-width: 500px;
+        }
+
+        /* Button Styling */
+        button {
+            padding: 12px 25px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.2s;
+        }
+
+        /* Button Hover Effects */
+        button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        /* Button Active (Pressed) Effect */
+        button:active {
+            transform: translateY(2px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 28px;
+            }
+            p {
+                font-size: 16px;
+            }
+            button {
+                padding: 10px 20px;
+                font-size: 16px;
+            }
+        }
+
+        /* Box Shadow for buttons and sections */
+        button, p {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Embedding Example</h1>
+    
+    <p id="internal-demo">This text will change using internal JavaScript.</p>
+    <button onclick="changeTextInternal()">Change Text (Internal JS)</button>
+    
+    <p id="external-demo">This text will change using external JavaScript.</p>
+    <button onclick="changeTextExternal()">Change Text (External JS)</button>
+    
+    <!-- Internal JavaScript -->
+    <script>
+        function changeTextInternal() {
+            document.getElementById("internal-demo").innerHTML = "This text is updated using internal JavaScript!";
+        }
+    </script>
+    <script>
+        function changeTextExternal() {
+    document.getElementById("external-demo").innerHTML = "This text is updated using external JavaScript!";
+}
+    </script>
+</body>
+</html>
